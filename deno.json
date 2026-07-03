@@ -1,0 +1,38 @@
+{
+  "name": "agent-studio",
+  "version": "0.1.0",
+  "exports": "./main.ts",
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "desktop": "deno desktop main.ts",
+    "desktop:hmr": "deno desktop --hmr main.ts",
+    "desktop:build": "deno desktop --output ./dist/AgentStudio.app main.ts",
+    "desktop:build:dmg": "deno desktop --output ./dist/AgentStudio.dmg main.ts",
+    "desktop:build:linux": "deno desktop --target x86_64-unknown-linux-gnu --output ./dist/agent-studio.AppImage main.ts",
+    "desktop:build:windows": "deno desktop --target x86_64-pc-windows-msvc --output ./dist/AgentStudio.exe main.ts"
+  },
+  "desktop": {
+    "app": {
+      "name": "Agent Studio",
+      "identifier": "com.playroom.agent-studio",
+      // Provide your own icons at these paths.
+      // macOS: .icns or array of PNGs; Windows: .ico; Linux: .png
+      // If unset, the default Deno icon is used.
+      // "icons": {
+      //   "macos":   "./icons/app.icns",
+      //   "windows": "./icons/app.ico",
+      //   "linux":   "./icons/app.png"
+      // },
+      "deepLinks": ["agent-studio"]
+    },
+    "backend": "webview",
+    "output": {
+      "macos": "./dist/AgentStudio.app",
+      "windows": "./dist/AgentStudio",
+      "linux": "./dist/agent-studio"
+    },
+    "errorReporting": {
+      "url": ""
+    }
+  }
+}
