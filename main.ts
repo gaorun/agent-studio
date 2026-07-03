@@ -1,4 +1,5 @@
 /// <reference lib="dom" />
+/// <reference path="./deno.d.ts" />
 
 Deno.serve((req: Request) => {
   const url = new URL(req.url);

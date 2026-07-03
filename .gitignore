@@ -1,5 +1,6 @@
 # Deno
 deno.lock
+deno.d.ts
 
 # Build output
 dist/
