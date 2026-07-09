@@ -15,14 +15,6 @@
     "app": {
       "name": "Agent Studio",
       "identifier": "com.playroom.agent-studio",
-      // Provide your own icons at these paths.
-      // macOS: .icns or array of PNGs; Windows: .ico; Linux: .png
-      // If unset, the default Deno icon is used.
-      // "icons": {
-      //   "macos":   "./icons/app.icns",
-      //   "windows": "./icons/app.ico",
-      //   "linux":   "./icons/app.png"
-      // },
       "deepLinks": ["agent-studio"]
     },
     "backend": "webview",
